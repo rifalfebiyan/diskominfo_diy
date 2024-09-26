@@ -22,7 +22,29 @@
             <h3>Daftar Tamu</h3>
             <a href="/tamu/create" class="btn btn-sm btn-primary">Tambah Tamu</a>
         </div>
+        <table class="table my-4">
+          <thead>
+            <tr>
+              <td>ID TAMU</td>
+              <td>NAMA TAMU</td>
+              <td>JENIS KELAMIN</td>
+              <td>ALAMAT</td>
+            </tr>
+          </thead>
+          <tbody>
+            {{ range $index, $tamu := .tamuu}}
+            <tr>
+              <td>{{$tamu.IdTamu}}</td>
+              <td>{{$tamu.NamaTamu}}</td>
+              <td>{{$tamu.JenisKelamin}}</td>
+              <td>{{$tamu.Alamat}}</td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
     </div>
+
+    
 
     <!-- Optional JavaScript; choose one of the two! -->
 
