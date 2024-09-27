@@ -8,12 +8,54 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #5a67d8;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 800px;
+        }
+        h3 {
+            color: #333;
+        }
+        .table {
+            margin-top: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+        }
+        thead {
+            background-color: #f7fafc;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .btn-primary {
+            background-color: #5a67d8;
+            border-color: #5a67d8;
+            border-radius: 8px;
+        }
+        .btn-primary:hover {
+            background-color: #4c51bf;
+            border-color: #4c51bf;
+        }
+    </style>
+
     <title>Daftar Tamu</title>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-primary">
+    <nav class="navbar navbar-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar">Go CRUD</a>
+            <a href="#" class="navbar-brand">LOGO PEMDA INTINYA</a>
         </div>
     </nav>
 
@@ -22,13 +64,13 @@
             <h3>Daftar Tamu</h3>
             <a href="/tamu/create" class="btn btn-sm btn-primary">Tambah Tamu</a>
         </div>
-        <table class="table my-4">
+        <table class="table table-hover">
           <thead>
             <tr>
-              <td>ID TAMU</td>
-              <td>NAMA TAMU</td>
-              <td>JENIS KELAMIN</td>
-              <td>ALAMAT</td>
+              <th>ID TAMU</th>
+              <th>NAMA TAMU</th>
+              <th>JENIS KELAMIN</th>
+              <th>ALAMAT</th>
             </tr>
           </thead>
           <tbody>
@@ -44,17 +86,10 @@
         </table>
     </div>
 
-    
-
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
