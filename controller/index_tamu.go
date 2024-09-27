@@ -9,7 +9,7 @@ import (
 
 // deklarasi
 type Tamu struct {
-	IdTamu       int
+	IdTamu       string
 	NamaTamu     string
 	JenisKelamin string
 	Alamat       string

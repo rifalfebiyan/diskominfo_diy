@@ -21,23 +21,17 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 30px;
-            max-width: 800px;
+            max-width: 600px;
         }
         h3 {
             color: #333;
         }
-        .table {
-            margin-top: 20px;
+        .form-label {
+            font-weight: 500;
         }
-        th, td {
-            text-align: left;
-            padding: 12px;
-        }
-        thead {
-            background-color: #f7fafc;
-        }
-        tbody tr:nth-child(even) {
-            background-color: #f2f2f2;
+        .form-control {
+            border-radius: 8px;
+            border-color: #ddd;
         }
         .btn-primary {
             background-color: #5a67d8;
@@ -50,44 +44,40 @@
         }
     </style>
 
-    <title>Daftar Tamu</title>
+    <title>Form Update Tamu</title>
   </head>
   <body>
     <nav class="navbar navbar-dark">
         <div class="container-fluid">
-            <a href="#" class="navbar-brand">LOGO PEMDA INTINYA</a>
+            <a href="/tamu" class="navbar-brand">LOGO PEMDA INTINYA</a>
         </div>
     </nav>
 
     <div class="container my-5">
-        <div class="d-flex justify-content-between mb-3">
-            <h3>Daftar Tamu</h3>
-            <a href="/tamu/create" class="btn btn-sm btn-primary">Tambah Tamu</a>
+        <div class="d-flex justify-content-between mb-4">
+            <h3>Form Tamu</h3>
         </div>
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>ID TAMU</th>
-              <th>NAMA TAMU</th>
-              <th>JENIS KELAMIN</th>
-              <th>ALAMAT</th>
-              <th>ACTION</th>
-            </tr>
-          </thead>
-          <tbody>
-            {{ range $index, $tamu := .tamuu}}
-            <tr>
-              <td>{{$tamu.IdTamu}}</td>
-              <td>{{$tamu.NamaTamu}}</td>
-              <td>{{$tamu.JenisKelamin}}</td>
-              <td>{{$tamu.Alamat}}</td>
-              <td>
-                <a href="/tamu/update?id_tamu={{ $tamu.IdTamu }}" class="btn btn-warning">Edit</a>
-              </td>
-            </tr>
-            {{ end }}
-          </tbody>
-        </table>
+
+        <form action="/tamu/update?id_tamu={{ .tamu.IdTamu }}" method="POST">
+        <!-- <div class="mb-3">
+          <label for="id_tamu" class="form-label">ID</label>
+          <input type="text" id="id_tamu" name="id_tamu" class="form-control " value="{{ .tamu.IdTamu}}"/>
+        </div> -->
+        <div class="mb-3">
+          <label for="nama_tamu" class="form-label">Nama Tamu</label>
+          <input type="text" id="nama_tamu" name="nama_tamu" class="form-control" value="{{ .tamu.NamaTamu }}"/>
+        </div>
+       <div class="mb-3">
+          <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+          <input type="text" id="jenis_kelamin" name="jenis_kelamin" class="form-control" value="{{ .tamu.JenisKelamin}}" />
+        </div>
+        <div class="mb-3">
+          <label for="alamat" class="form-label">Alamat</label>
+          <textarea id="alamat" name="alamat" class="form-control" rows="3">{{ .tamu.Alamat}}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Edit</button>
+      </form>
+
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
