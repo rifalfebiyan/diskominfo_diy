@@ -82,7 +82,8 @@
               <td>{{$tamu.JenisKelamin}}</td>
               <td>{{$tamu.Alamat}}</td>
               <td>
-                <a href="/tamu/update?id_tamu={{ $tamu.IdTamu }}" class="btn btn-warning">Edit</a>
+                <a href="/tamu/update?id_tamu={{ $tamu.IdTamu }}" class="btn btn-warning ">Edit</a>
+                <a href="/tamu/delete?id_tamu={{ $tamu.IdTamu }}" class="btn btn-danger">Hapus</a>
               </td>
             </tr>
             {{ end }}
